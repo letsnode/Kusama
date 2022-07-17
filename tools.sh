@@ -55,6 +55,6 @@ update() {
 
 # Actions
 sudo apt install wget -y &>/dev/null
-. <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/logo.sh)
+. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/logo.sh)
 cd
 $function
