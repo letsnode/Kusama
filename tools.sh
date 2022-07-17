@@ -3,12 +3,12 @@
 function="install"
 
 # Options
-. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/colors.sh) --
+. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/colors.sh) --
 option_value(){ echo "$1" | sed -e 's%^--[^=]*=%%g; s%^-[^=]*=%%g'; }
 while test $# -gt 0; do
 	case "$1" in
 	-h|--help)
-		. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/logo.sh)
+		. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/logo.sh)
 		echo
 		echo -e "${C_LGn}Functionality${RES}: the script performs many actions related to a Kusama node"
 		echo
@@ -19,7 +19,7 @@ while test $# -gt 0; do
 		echo -e "  -u,  --update  update the node"
 		echo
 		echo -e "${C_LGn}Useful URLs${RES}:"
-		echo -e "https://github.com/letsnode/Utils/blob/main/installers/golang.sh - script URL"
+		echo -e "https://raw.githubusercontent.com/letsnode/Utils/main/installers/golang.sh - script URL"
 		echo -e "https://t.me/letskynode — node Community"
 		echo -e "https://teletype.in/@letskynode — guides and articles"
 		echo
@@ -55,6 +55,7 @@ update() {
 
 # Actions
 sudo apt install wget -y &>/dev/null
-. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/logo.sh)
+. /root/.bash_profile
+. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/logo.sh)
 cd
 $function
